@@ -1,5 +1,6 @@
 package isi.died2020.parcial01.ejercicio02.app;
 
+import isi.died2020.parcial01.ejercicio02.db.BaseDeDatosExcepcion;
 import isi.died2020.parcial01.ejercicio02.dominio.*;
 
 
@@ -17,15 +18,20 @@ public interface MySysAcad {
 	 * crea una nueva instancia de Inscripcion y 
 	 * asigna la inscripcion a la lista de inscripciones del alumno, 
 	 * de la materia y del docente
+	 * @throws InscripcionAlumnoCursadaException 
+	 * @throws InscripcionAlumnoMateriaNoLibreException 
 	 */
-	public void inscribirAlumnoCursada(Docente d,Alumno a, Materia m,Integer cicloLectivo);
+	public void inscribirAlumnoCursada(Docente d,Alumno a, Materia m,Integer cicloLectivo) throws BaseDeDatosExcepcion, InscripcionAlumnoCursadaException, InscripcionAlumnoMateriaNoLibreException;
 
 	/**
 	 * crea una nueva instancia de Inscripcion y 
 	 * asigna la inscripcion a la lista de inscripciones del alumno, 
 	 * de la materia y del docente
 	 */
-	public void inscribirAlumnoExamen(Docente d,Alumno a, Materia m);
-	
+	public void inscribirAlumnoExamen(Docente d,Alumno a, Materia m) throws BaseDeDatosExcepcion, InscripcionAlumnoCursadaException;
+
+
+	void registrarNota(Integer nota, Examen e);
+	List<Examen> topNExamenes(Alumno a,Integer n,Integer nota);
 
 }
