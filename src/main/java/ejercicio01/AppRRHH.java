@@ -17,9 +17,7 @@ public class AppRRHH {
 		
 		}
 		
-		System.out.println(recibos.get(0).getNumero());
-		System.out.println(recibos.get(0).getMes());
-		System.out.println(recibos.get(0).getTotalPago());
+		
 		return recibos;
 		
 		
