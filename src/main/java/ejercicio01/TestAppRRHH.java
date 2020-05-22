@@ -21,7 +21,7 @@ public class TestAppRRHH {
 	public void setUp() throws Exception {
 		
 		Empleado e1 = new Operario(2042470232l, "Pedro Perez", LocalDateTime.now().minusMonths(8), 250d);
-		
+		AppRRHH app = new AppRRHH();
 }
 	
 	
