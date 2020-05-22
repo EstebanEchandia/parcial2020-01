@@ -78,22 +78,15 @@ public class MySysAcadImpl implements MySysAcad {
 	}
 	
 	@Override
-	public List<Examen> topNExamenes(Alumno a,Integer n,Integer nota){
-		
-		
+	public List<Examen> topNExamenes(Alumno a,Integer n,Integer nota){	
 		return a.getExamenes().stream()
 						.filter(e1 -> e1.getNota() > nota)
 						.limit(n)
+						.sorted((e3,e4) -> e4.getNota().compareTo(e3.getNota()))
 						.collect(Collectors.toList());
-		
-		
-		
-	
-		
-		
-		
-		
 	}
+	
+	
 	
 	@Override
 	public void inscribirAlumnoExamen(Docente d, Alumno a, Materia m) {

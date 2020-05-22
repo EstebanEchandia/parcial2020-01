@@ -25,8 +25,11 @@ public class Operario extends Empleado {
 	@Override
 	public double getSalario() {
 		double salario = this.sueldo;
-		for(Viajante v: ListaViajantes) {
-			salario += v.getTotalVentas()*0.05;
+		
+		if(ListaViajantes!=null) {
+			for(Viajante v: ListaViajantes) {
+				salario += v.getTotalVentas()*0.05;
+			}
 		}
 		
 		if(this.cobraBonus()) {

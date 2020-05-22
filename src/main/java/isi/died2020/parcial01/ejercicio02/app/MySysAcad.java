@@ -1,5 +1,7 @@
 package isi.died2020.parcial01.ejercicio02.app;
 
+import java.util.List;
+
 import isi.died2020.parcial01.ejercicio02.db.BaseDeDatosExcepcion;
 import isi.died2020.parcial01.ejercicio02.dominio.*;
 

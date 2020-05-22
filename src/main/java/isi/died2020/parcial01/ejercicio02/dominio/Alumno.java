@@ -49,4 +49,17 @@ public class Alumno {
 		e.setInscripto(this);
 	}
 
+
+	
+	public List<Examen> getExamenes() {
+		return examenes;
+	}
+
+
+	public List<Inscripcion> getMateriasCursadas() {
+		return materiasCursadas;
+	}
+	
+	
+
 }
